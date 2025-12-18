@@ -1,0 +1,31 @@
+.settlement-form-container {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.settlement-info {
+  background: rgba(16, 185, 129, 0.05);
+  border-left: 3px solid var(--secondary-color);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+}
+
+.settlement-info strong {
+  color: var(--text-primary);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.form-actions button {
+  min-width: 150px;
+}

@@ -1,0 +1,150 @@
+.settlements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settlements-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settlements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settlement-card {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.settlement-card.pending-card {
+  border-left: 4px solid var(--warning);
+  background: linear-gradient(to right, rgba(var(--warning-rgb, 245, 158, 11), 0.1), transparent);
+}
+
+.settlement-card.sent-card {
+  border-left: 4px solid var(--primary);
+  background: linear-gradient(to right, rgba(var(--primary-rgb, 99, 102, 241), 0.1), transparent);
+}
+
+.settlement-card.history-card {
+  opacity: 0.8;
+}
+
+.settlement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settlement-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.settlement-user .user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.settlement-user .user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.settlement-user .user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.settlement-message {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.settlement-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.settlement-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.settlement-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.settlement-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.badge-pending {
+  background: var(--warning);
+  color: white;
+}
+
+.badge-accepted {
+  background: var(--success);
+  color: white;
+}
+
+.badge-rejected {
+  background: var(--danger);
+  color: white;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .settlement-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settlement-amount {
+    font-size: 1.25rem;
+  }
+
+  .settlement-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .settlement-actions {
+    width: 100%;
+  }
+
+  .settlement-actions button {
+    flex: 1;
+  }
+}
