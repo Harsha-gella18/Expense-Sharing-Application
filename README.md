@@ -1,4 +1,4 @@
-# Expense Sharing App - Frontend
+# Expense Sharing App
 
 A web application to manage and split expenses among groups. Create groups, add expenses, track balances, and settle payments with approval workflow.
 
@@ -13,16 +13,49 @@ A web application to manage and split expenses among groups. Create groups, add 
 
 ## How to Run
 
-1. Install dependencies:
+### Backend
+
+1. Navigate to Backend folder:
+```bash
+cd Backend
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start the server:
+3. Create `.env` file with:
+```
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PORT=7000
+```
+
+4. Start the server:
 ```bash
 npm run dev
 ```
 
-The app will run on `http://localhost:3000`
+The backend will run on `http://localhost:7000`
 
-**Note:** Make sure the backend is running on port 7000 before starting the frontend.
+### Frontend
+
+1. Navigate to Frontend folder:
+```bash
+cd Frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the server:
+```bash
+npm run dev
+```
+
+The frontend will run on `http://localhost:3000`
+
+**Note:** Make sure the backend is running before starting the frontend.
